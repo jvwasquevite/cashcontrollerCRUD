@@ -1,0 +1,17 @@
+<div class="cadastroPage">
+  <img style="max-width: 100px; padding-bottom: 30px;" src="http://localhost:8081/images/logo.png">
+    <div class="cadastroForm">
+      <div class="title"><i style="margin-right: 5px; color: #668E28;" class="fas fa-edit"></i> Editar transação:</div>
+      <form action="/editado/{{id}}" method="POST">
+          <p>Qual o seu nome? </p>
+          <input type="text" name="nome" placeholder="{{nome}}">
+          <p>Qual o valor da compra em R$? </p>
+          <input type="number" name="valor" placeholder="{{valor}}">
+          <p>Quando você comprou?: </p>
+          <input type="date" name="data" placeholder="{{data}}">
+          <p>O que você comprou? </p>
+          <input type="text" name="compra" placeholder="{{compra}}">
+          <button type="submit"><i class="fas fa-arrow-right"></i></button>
+      </form>
+    </div>
+</div>

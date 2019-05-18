@@ -1,0 +1,105 @@
+<!-- Sidebar -->
+	<div class="sidebar">
+		<!-- Head -->
+		<div class="head">
+			CashController &raquo; Hut8
+		</div>
+		<!-- User profile info -->
+		<div class="user">
+			<div class="logo"><img src="images/users/jvwasquevite.jpg"></div>
+			<div class="name">
+				<b>João</b> <br>
+				<i>Trainee</i> <br>
+				@jvwasquevite
+			</div>
+		</div>
+		<!-- Saldo -->
+		<div class="saldo">
+		Seu saldo é de -R$ 289,97.
+		</div>
+		<!-- Menu -->
+		<div class="menu">
+			<a class="receita" id="clickme" href="/cadastro"><i style="margin-right: 5px; color: #668E28;" class="fas fas fa-exchange-alt"></i> Registrar transação</a>
+			<a class="active" href="#">Painel de controle</a>
+			<a href="#">Gastos por categoria</a>
+			<a href="#">Extrato de transações</a>
+			<a href="#">Cadastrar usuário</a>
+		</div>
+	</div>
+
+	<!-- Left content -->
+	<div class="content">
+		<!-- Topbar -->
+		<div class="topbar">
+			<div class="logout">
+				<div class="logo"><img src="images/logo.png"></div>
+				<div class="name"><i class="fas fa-sign-out-alt"></i> Fazer logout</div>
+			</div>
+		</div>
+		<!-- Staff info bar -->
+		<div class="infobar">
+			<div class="staff">
+				<div class="photo"><img src="images/users/daniel.jpg"></div>
+				<div class="desc">
+					<b>Daniel Teixeira</b> <br>
+					<i>Cons. Presidência</i> <br>
+					<p><a href="#"><i style="margin-right: 5px;" class="fas fa-user-alt"></i> Acessar perfil</a></p>
+				</div>
+			</div>
+			<div class="staff">
+				<div class="photo"><img src="images/users/gabriel.jpg"></div>
+				<div class="desc">
+					<b>Gabriel Aragão</b> <br>
+					<i>Cons. Presidência</i> <br>
+					<p><a href="#"><i style="margin-right: 5px;" class="fas fa-user-alt"></i> Acessar perfil</a></p>
+				</div>
+			</div>
+			<div class="staff">
+				<div class="photo"><img src="images/users/carlos.jpg"></div>
+				<div class="desc">
+					<b>Carlos Calage</b> <br>
+					<i>Cons. Gestão</i> <br>
+					<p><a href="#"><i style="margin-right: 5px;" class="fas fa-user-alt"></i> Acessar perfil</a></p>
+				</div>
+			</div>
+			<div class="staff">
+				<div class="photo"><img src="images/users/larissa.jpg"></div>
+				<div class="desc">
+					<b>Larissa Raulino</b> <br>
+					<i>Cons. de Marketing</i> <br>
+					<p><a href="#"><i style="margin-right: 5px;" class="fas fa-user-alt"></i> Acessar perfil</a></p>
+				</div>
+			</div>
+			<div class="staff">
+				<div class="photo"><img src="images/users/igor.jpeg"></div>
+				<div class="desc">
+					<b>Igor Barbosa</b> <br>
+					<i>Diretor de Marketing</i> <br>
+					<p><a href="#"><i style="margin-right: 5px;" class="fas fa-user-alt"></i> Acessar perfil</a></p>
+				</div>
+			</div>
+		</div>
+		<!-- Boxes sections -->
+		<div class="boxes_section">
+			<!-- Pizza chart -->
+			<div class="box">
+				<div class="title"><i style="margin-right: 5px; color: #668E28;" class="fas fa-chart-pie"></i> Gastos por categoria:</div>
+				<div id="donutchart" style="height: 250px;"></div>
+			</div>
+			<!-- Transacoes feed -->
+			<div class="box">
+        <div class="title"><i style="margin-right: 5px; color: #668E28;" class="fas fa-exchange-alt"></i> Extrato de transações:</div>
+				<div class="transacoesList">
+					{{#each transacoes}}
+	        <div class="transacao">
+	          <div class="photo"><i style="color: red;" class="fas fa-arrow-down"></i></div>
+	          <div class="desc"><b>{{nome}}</b> gastou <span style="font-weight: bold; color: red;">R$ {{valor}},00</span> em <i>{{compra}}</i> no dia {{data}}.<br>
+							<a href="/deletar/{{id}}" class="transButton"><i class="fas fa-trash"></i> Deletar</a>
+							<a href="/editar/{{id}}" class="transButton"><i class="fas fa-edit"></i> Editar</a>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
