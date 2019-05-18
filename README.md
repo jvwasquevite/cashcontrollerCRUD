@@ -8,3 +8,9 @@ O projeto foi integrado com o front-end criado durante o sprint #1.
 2. Sequelize;<br>
 3. Handlebars;<br>
 4. Body Parser.
+   
+<h2>Screenshots:</h2>
+<img src="https://i.imgur.com/FRBRelU.png"><br>
+<img src="https://i.imgur.com/cAq5VBT.png"><br>
+<img src="https://i.imgur.com/zGYNYkK.png"><br>
+<img src="https://i.imgur.com/gBLwn8V.png">
